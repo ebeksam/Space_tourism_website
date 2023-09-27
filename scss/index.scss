@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+
+$white-color: #fff;
+
+%font {
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../starter-code/assets/home/background-home-desktop.jpg");
+  font-family: "Barlow Condensed", sans-serif;
+  max-width: 130.315rem;
+  overflow-x: hidden;
+}
+
+.active:after {
+  width: 100%;
+  border-bottom: 0.1875rem solid white;
+  border-radius: 1px;
+}
+
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 0 0 3.44rem;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .border {
+      opacity: 0.2515;
+      background: #fff;
+      width: 29.5625rem;
+      height: 0.0625rem;
+      left: 12.5rem;
+      position: absolute;
+      z-index: 10;
+    }
+
+    button {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 3.12rem;
+      background-color: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40.774227142333984px);
+      padding: 2.44rem 10.44rem 2.38rem 7.69rem;
+
+      li {
+        list-style-type: none;
+        a {
+          color: #fff;
+          text-decoration: none;
+          @extend %font;
+          font-family: "Barlow Condensed";
+          font-size: 1rem;
+          letter-spacing: 0.16875rem;
+          position: relative;
+
+          span {
+            color: $white-color;
+            color: #fff;
+            font-family: "Barlow Condensed";
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.16875rem;
+          }
+        }
+
+        a:after {
+          content: "";
+          display: block;
+          background-color: white;
+          position: absolute;
+          bottom: -2.3rem;
+          left: 0;
+          transition: width 0.3s;
+        }
+
+        // a.active:after {
+        //   width: 100%;
+        //   border-bottom: 0.1875rem solid white;
+        //   border-radius: 1px;
+        // }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin: 15.61rem 10.28rem 8.19rem 10.34rem;
+  div {
+    h1 {
+      color: $white-color;
+      font-family: "Bellefair", serif;
+      font-size: 9.375rem;
+      @extend %font;
+      padding: 1.5rem 0;
+    }
+
+    h2 {
+      color: #d0d6f9;
+      font-size: 1.75rem;
+      @extend %font;
+      letter-spacing: 0.29531rem;
+    }
+    p {
+      color: #d0d6f9;
+      font-family: "Barlow";
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2rem; /* 177.778% */
+      width: 27.75rem;
+    }
+  }
+
+  .explore {
+    margin-top: 6.62rem;
+    h3 {
+      background-color: #fff;
+      padding: 7.44rem 4rem 7.37rem 3.88rem;
+      width: 17.125rem;
+      height: 17.125rem;
+      border-radius: 17.125rem;
+      color: #0b0d17;
+      font-family: "Bellefair";
+      font-size: 2rem;
+      @extend %font;
+      letter-spacing: 0.125rem;
+      text-align: center;
+    }
+  }
+}
+
+@import "tablet";
+@import "mobile";
